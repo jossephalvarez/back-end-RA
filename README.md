@@ -41,10 +41,17 @@ I've created this, with this command :
 sequelize seed:generate --name demo-user
 ```
 
+
 And you can create another following this  [Creating First Seedl](http://docs.sequelizejs.com/manual/migrations.html) on the official documentation.
 
 With this step you can insert/delete element to the tables that you've created.
 
+
+#### Run specific seeder
+
+```
+sequelize db:seed --seed /seeders/20190423123921-demo-type.js
+```
 
 ## Running the tests
 
