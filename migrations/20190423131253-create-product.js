@@ -9,11 +9,14 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             name: {
+                allowNull: false,
                 type: Sequelize.STRING
             },
             price: {
+                allowNull: false,
                 type: Sequelize.FLOAT
             }, TypeId: {
+                allowNull: false,
                 type: Sequelize.STRING,
                 onDelete: "CASCADE",
                 references: {
