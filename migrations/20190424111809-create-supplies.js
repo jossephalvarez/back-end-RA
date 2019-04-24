@@ -16,12 +16,21 @@ module.exports = {
                 type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
                 allowNull: false
             },
-            locationId:{
+            locationId: {
                 type: Sequelize.INTEGER,
                 onDelete: "CASCADE",
                 allowNull: false,
                 references: {
                     model: 'Locations',
+                    key: 'id'
+                }
+            }
+            , providerId: {
+                type: Sequelize.INTEGER,
+                onDelete: "CASCADE",
+                allowNull: false,
+                references: {
+                    model: 'People',
                     key: 'id'
                 }
             }

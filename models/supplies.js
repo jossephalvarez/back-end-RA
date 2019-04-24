@@ -8,6 +8,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey:{
           allowNull:false
         }
+      });
+      supplies.belongsTo(models.people, {
+          foreignKey: {
+              allowNull: false
+          }
       })
   };
   return supplies;

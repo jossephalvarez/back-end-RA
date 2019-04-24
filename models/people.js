@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     active: DataTypes.BOOLEAN
   }, {});
   People.associate = function(models) {
-    // associations can be defined here
+    People.hasMany(models.supplies)
   };
   return People;
 };
