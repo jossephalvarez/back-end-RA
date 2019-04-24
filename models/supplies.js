@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: {
               allowNull: false
           }
+      });
+      supplies.belongsTo(models.product, {
+          through: 'supplies_has_products',
+          as: 'products',
+          foreignKey: 'supplyId',
       })
   };
   return supplies;

@@ -10,6 +10,11 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             }
         });
+        Product.belongsTo(models.supplies, {
+            through: 'supplies_has_products',
+            as: 'supplies',
+            foreignKey: 'productId',
+        })
     };
     return Product;
 };
