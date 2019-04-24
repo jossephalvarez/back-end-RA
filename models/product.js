@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
         price: DataTypes.FLOAT
     }, {});
     Product.associate = function (models) {
-        // associations can be defined here
         Product.belongsTo(models.Type, {
             foreignKey: {
                 allowNull: false

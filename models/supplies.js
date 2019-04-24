@@ -4,7 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     date: DataTypes.STRING
   }, {});
   supplies.associate = function(models) {
-    // associations can be defined here
+      supplies.belongsTo(models.location,{
+        foreignKey:{
+          allowNull:false
+        }
+      })
   };
   return supplies;
 };

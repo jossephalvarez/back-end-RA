@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     province: DataTypes.STRING
   }, {});
   Location.associate = function(models) {
-    // associations can be defined here
+      Location.hasMany(models.supplies);
   };
   return Location;
 };
