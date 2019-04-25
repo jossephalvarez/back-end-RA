@@ -18,9 +18,9 @@ module.exports = {
                 onDelete: 'CASCADE',
                 allowNull: false,
             },
-            providerId: {
+            productId: {
                 type: Sequelize.INTEGER,
-                references: { model: 'People', key: 'id' },
+                references: { model: 'Products', key: 'id' },
                 onDelete: 'CASCADE',
                 allowNull: false,
             },
