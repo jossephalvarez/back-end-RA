@@ -9,7 +9,7 @@ module.exports = {
             nickname: 'Zino',
             phone: '615224558',
             email: 'jjsj@gmail.com',
-            type: 'employee',
+            isProvider: false,
             password: '123456'
         }, {
 
@@ -19,7 +19,6 @@ module.exports = {
             nickname: 'Zino',
             phone: '615224558',
             email: 'jjsj@gmail.com',
-            type: 'provider',
             password: '123456'
         },
             {
@@ -30,7 +29,6 @@ module.exports = {
                 nickname: 'Zino',
                 phone: '615224558',
                 email: 'jjsj@gmail.com',
-                type: 'provider',
                 password: '123456'
 
             }

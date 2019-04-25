@@ -34,10 +34,9 @@ module.exports = {
             adress: {
                 type: Sequelize.STRING
             },
-            type: {
-                allowNull: false,
-                type: Sequelize.ENUM,
-                values: ['employee', 'provider', 'admin']
+            isProvider:{
+                type: Sequelize.BOOLEAN,
+                defaultValue: true
             },
             password: {
                 type: Sequelize.STRING
