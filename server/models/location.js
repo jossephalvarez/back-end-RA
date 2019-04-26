@@ -5,11 +5,11 @@ module.exports = (sequelize, DataTypes) => {
         address: DataTypes.STRING,
         city: DataTypes.STRING,
         province: DataTypes.STRING
-    },{
+    }, {
         timestamps: false
     });
     Location.associate = function (models) {
-        Location.hasMany(models.Supply,{
+        Location.hasMany(models.Supply, {
             foreignKey: 'supply_id',
             as: 'supplies'
         });
