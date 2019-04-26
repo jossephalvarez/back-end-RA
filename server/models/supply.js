@@ -4,20 +4,16 @@ module.exports = (sequelize, DataTypes) => {
     date: DataTypes.STRING,
     provider_id: DataTypes.INTEGER,
     location_id: DataTypes.INTEGER
-  }, {});
+  }, { timestamps: false});
   Supply.associate = function(models) {
     // associations can be defined here
       Supply.belongsTo(models.Location,{
-          foreignKey:{
-              allowNull:false
-          }
+          foreignKey: 'location_id',
       });
       Supply.belongsTo(models.People, {
-          foreignKey: {
-              allowNull: false
-          }
+          foreignKey: 'provider_id',
       });
-      Supply.belongsTo(models.Product, {
+      Supply.belongsToMany(models.Product, {
           through: 'SuplyProduct',
           as: 'products',
           foreignKey: 'supply_id',

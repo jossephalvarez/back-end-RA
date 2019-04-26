@@ -1,4 +1,5 @@
 const Type = require('../models').Type;
+const Product = require('../models').Product;
 
 module.exports = {
     list(req, res) {
@@ -8,5 +9,16 @@ module.exports = {
             .catch((error) => {
                 res.status(400).send(error);
             });
+    },
+    listWithProducts(req, res) {
+        return Type
+            .findAll({
+                include: [{
+                    model: Product,
+                    as: 'products'
+                }],
+            })
+            .then((companies) => res.status(200).send(companies))
+            .catch((error) => { res.status(400).send(error); });
     },
 };
