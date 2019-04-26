@@ -1,4 +1,4 @@
-const Location=require('../models').location;
+const Location=require('../models').Location;
 
 module.exports = {
     add(req, res) {
@@ -9,7 +9,7 @@ module.exports = {
     },
     list(req, res) {
         return Location
-            .findAll()
+            .all()
             .then((locations) => res.status(200).send(locations))
             .catch((error) => { res.status(400).send(error); });
     },
