@@ -7,11 +7,13 @@ module.exports = (sequelize, DataTypes) => {
         nickname: DataTypes.STRING,
         phone: DataTypes.STRING,
         email: DataTypes.STRING,
-        adress: DataTypes.STRING,
+        address: DataTypes.STRING,
         is_provider: DataTypes.BOOLEAN,
         password: DataTypes.STRING,
         active: DataTypes.BOOLEAN
-    }, {});
+    }, {
+        timestamps: false
+    });
     People.associate = function (models) {
         People.hasMany(models.Supply)
     };
