@@ -10,10 +10,10 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             }
         });
-        Product.belongsTo(models.supplies, {
-            through: 'supplies_has_products',
+        Product.belongsTo(models.Supply, {
+            through: 'SuplyProduct',
             as: 'supplies',
-            foreignKey: 'productId',
+            foreignKey: 'product_id',
         })
     };
     return Product;

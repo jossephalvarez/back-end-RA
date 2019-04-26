@@ -8,12 +8,12 @@ module.exports = (sequelize, DataTypes) => {
         phone: DataTypes.STRING,
         email: DataTypes.STRING,
         adress: DataTypes.STRING,
-        isProvider: DataTypes.BOOLEAN,
+        is_provider: DataTypes.BOOLEAN,
         password: DataTypes.STRING,
         active: DataTypes.BOOLEAN
     }, {});
     People.associate = function (models) {
-        People.hasMany(models.supplies)
+        People.hasMany(models.Supply)
     };
     return People;
 };

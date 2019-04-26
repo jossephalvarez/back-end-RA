@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('people', {
+        return queryInterface.createTable('People', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
@@ -31,10 +31,10 @@ module.exports = {
             email: {
                 type: Sequelize.STRING
             },
-            adress: {
+            address: {
                 type: Sequelize.STRING
             },
-            isProvider:{
+            is_provider:{
                 type: Sequelize.BOOLEAN,
                 defaultValue: true
             },
@@ -48,6 +48,6 @@ module.exports = {
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('people');
+        return queryInterface.dropTable('People');
     }
 };

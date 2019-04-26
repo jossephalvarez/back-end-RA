@@ -9,7 +9,7 @@ module.exports = {
             nickname: 'Zino',
             phone: '615224558',
             email: 'jjsj@gmail.com',
-            isProvider: false,
+            is_provider: false,
             password: '123456'
         }, {
 
